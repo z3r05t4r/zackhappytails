@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zack Happy Tails | Success Stories</title>
+    <style>
+        :root {
+            --primary: #e67e22;
+            --secondary: #2c3e50;
+            --light: #fdfaf7;
+            --accent: #27ae60;
+            --gray: #ecf0f1;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Arial, sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--light); color: var(--secondary); line-height: 1.6; }
+
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: var(--white); position: sticky; top: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.05); z-index: 1000; }
+        .logo { font-size: 1.6rem; font-weight: 800; color: var(--primary); text-transform: uppercase; }
+        .nav-links { list-style: none; display: flex; gap: 25px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--secondary); font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Section Layouts */
+        .section { padding: 80px 8%; text-align: center; }
+        .section h2 { font-size: 2.5rem; margin-bottom: 40px; }
+
+        /* Success Stories Section */
+        .stories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .story-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: left; }
+        .story-img { width: 100%; height: 300px; object-fit: cover; }
+        .story-content { padding: 25px; }
+        .story-content h3 { color: var(--primary); margin-bottom: 10px; font-style: italic; }
+        .quote { font-style: italic; color: #555; border-left: 3px solid var(--primary); padding-left: 15px; margin-top: 15px; }
+
+        /* Contact Form */
+        .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; text-align: left; background: var(--white); padding: 40px; border-radius: 20px; }
+        .contact-form { display: flex; flex-direction: column; gap: 15px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        
+        /* Success Message Alert */
+        #success-msg { display: none; background: var(--accent); color: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-weight: bold; }
+
+        /* Buttons */
+        .btn { padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; cursor: pointer; border: none; transition: 0.3s; display: inline-block; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: #d35400; }
+        
+        footer { background: #1a1a1a; color: white; padding: 40px 8%; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Zack Happy Tails</div>
+        <ul class="nav-links">
+            <li><a href="#gallery">Adopt</a></li>
+            <li><a href="#stories">Success Stories</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" class="btn btn-primary" style="padding: 10px 20px; color: white;">Donate</a></li>
+        </ul>
+    </nav>
+
+    <section id="stories" class="section">
+        <h2>Happy Tail Success Stories</h2>
+        <div class="stories-grid">
+            <div class="story-card">
+                <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?q=80&w=600&auto=format&fit=crop" class="story-img" alt="Dog in park">
+                <div class="story-content">
+                    <h3>"The Perfect Match"</h3>
+                    <p>Max was with us for 6 months before finding his forever home with the Miller family. Now he spends his days hiking!</p>
+                    <p class="quote">"We can't imagine life without him. Thank you, Zack Happy Tails!"</p>
+                </div>
+            </div>
+            <div class="story-card">
+                <img src="https://images.unsplash.com/photo-1574158622672-b4d8150430aa?q=80&w=600&auto=format&fit=crop" class="story-img" alt="Cat sleeping">
+                <div class="story-content">
+                    <h3>"Bella's New Kingdom"</h3>
+                    <p>Bella was a shy kitten who needed a patient hand. She's now the brave queen of her household in the city.</p>
+                    <p class="quote">"She has blossomed into the most affectionate companion."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section" style="background-color: var(--gray);">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Start Your Journey</h3>
+                <p>Ready to meet your new best friend? Send us a message and we'll get back to you within 24 hours.</p>
+                <br>
+                <p><strong>Email:</strong> hello@zackhappytails.org</p>
+                <p><strong>Location:</strong> 456 Rescue Lane, Happy Valley</p>
+            </div>
+            <div>
+                <div id="success-msg">Woof! Your message was sent successfully. We'll bark back soon!</div>
+                <form class="contact-form" id="pawsContactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Tell us which pet you're interested in..." required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Zack Happy Tails. Spreading joy, one tail at a time.</p>
+    </footer>
+
+    <script>
+        // Form Submission Logic
+        document.getElementById('pawsContactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop page from refreshing
+            
+            // Show the success message
+            document.getElementById('success-msg').style.display = 'block';
+            
+            // Hide the form
+            this.style.display = 'none';
+            
+            // Optional: Scroll to the success message
+            window.location.hash = '#success-msg';
+        });
+    </script>
+
+</body>
+</html>
